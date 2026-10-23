@@ -13,7 +13,7 @@ def main():
     if not output_dir:
         print("Thiếu biến OUTPUT_DIR trong file .env")
         return
-    
+     
     text = get_all_tickers_raw()
     
     if text is None:
@@ -26,7 +26,7 @@ def main():
     
     print("Đường dẫn lưu file:",path)
     print("Số phần tử",len(loaded_json))
-    
+    print("Hello")
     for s in symbols:
         price = get_price(s)
         if price is not None:
