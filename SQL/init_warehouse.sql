@@ -1,0 +1,10 @@
+CREATE SCHEMA IF NOT EXISTS bronze;
+CREATE SCHEMA IF NOT EXISTS silver;
+CREATE SCHEMA IF NOT EXISTS gold;
+
+CREATE TABLE IF NOT EXISTS bronze.raw_crypto_tickers (
+    id          BIGSERIAL PRIMARY KEY,
+    ingested_at TIMESTAMPTZ NOT NULL DEFAULT NOW(),
+    source      TEXT NOT NULL,
+    payload     JSONB NOT NULL
+);
